@@ -101,3 +101,29 @@ ul li:hover ul li {
 .Wrapper {
     position: relative;
 }
+
+.textanimation {
+    animation: typing-text 2s steps(33), blink 0.5s infinite alternate;
+    ;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #0f9b0f;
+}
+
+@keyframes typing-text {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 950px;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: #0f9b0f
+    }
+}
