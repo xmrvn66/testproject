@@ -1,96 +1,79 @@
 html {
-	background: #000000;  
-	background: -webkit-linear-gradient(to bottom, #0f9b0f, #000000);  
-	background: linear-gradient(to bottom, #0f9b0f, #000000); 
-	background-repeat: repeat-x;
-	background-size: cover;
-	min-height: 100%;
-	
-	
+    background: #000000;
+    background: -webkit-linear-gradient(to bottom, #0f9b0f, #000000);
+    background: linear-gradient(to bottom, #0f9b0f, #000000);
+    background-repeat: repeat-x;
+    background-size: cover;
+    min-height: 100%;
 }
 
 body {
-	font-family: Monospace;
+    font-family: Monospace;
 }
 
 ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: black;
-	position:absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	border-style: solid;
-	border-color: #000000;
-	border-width: 1px; 
+    top: 0px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    z-index: 9999;
 }
 
-
-li {
-	float: left;
+ul li {
+    float: left;
+    width: 90px;
+    height: 40px;
+    background-color: #000000;
+    line-height: 40px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
 }
 
-li a, .dropbtn {
-	display: inline-block;
-	padding: 14px 16px;
-	color: #0f9b0f; 
-	text-align: center;
-	text-decoration: none;
+ul li a {
+    text-decoration: none;
+    color: #0f9b0f;
+    display: block;
+    font-family: monospace;
+    font-size: 14px;
+    position: relative;
 }
 
-li a:hover:not(.active), .dropdown:hover:not(.active) {
-	background-color: #1a1a1a;
+ul li a:hover {
+    background-color: #1a1a1a;
 }
 
-li.dropdown {
-	display:inline-block;
+ul li ul li {
+    display: none;
 }
 
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #000000;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1; 
+ul li:hover ul li {
+    display: block;
+    border-bottom: 1px solid #1a1a1a;
 }
 
-.dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	text-align: left;
-}
-
-.dropdown-content a:hover {
-	background-color: #1a1a1a;
-}
-
-.dropdown:hover .dropdown-content {
-	display: block;
+.dropdown-menu {
+    position: relative;
 }
 
 .active {
-	background-color: #0f9b0f;
-	color: #000000;
-
+    background-color: #0f9b0f;
+    color: #000000;
 }
 
-.box {						 
-	width: 99%;
-  height: auto;
-  position: relative;
-  box-sizing: border-box;
-  border-radius: 10px 10px 0 0;
-  margin: 50px 0px 0px 0px;
-  padding: 40px 20px 20px 0px;
-  background-color: #000000;
+.box {
+    width: 99%;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0 0;
+    margin: 50px 0px 0px 0px;
+    padding: 40px 20px 20px 25px;
+    background-color: #000000;
 }
-
 
 .terminal-bar {
     background: #f9f9f3;
@@ -101,18 +84,17 @@ li.dropdown {
     padding: 5px;
     overflow: hidden;
     border-radius: 10px 10px 0 0;
-  }
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+}
 
 .text {
-	color: #0f9b0f;
-	font-family: monospace;
-	text-decoration: none;
+    color: #0f9b0f;
+    font-family: monospace;
+    text-decoration: none;
 }
- 
 
-
-/* Wieso ist neben active links noch platz und das deckt nicht 100% ?
-/* Wieso fährt mein Dropdown-Menü nicht aus?
-/* terminal-bar geht nicht nahtlos auf box 
-/* Box soll oben fixiert sein und sich nach unten nur verlängern
-/* Warum sind Hyperlinks unter Team/Design nicht Grün und ohne Unterstrich, so wie bei a oben definiert?
+.Wrapper {
+    position: relative;
+}
